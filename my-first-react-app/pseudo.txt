@@ -1,0 +1,4 @@
+Arite, here is the order of operations:
+
+1. Clear presets
+2. Customize root
