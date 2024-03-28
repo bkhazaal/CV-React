@@ -7,20 +7,20 @@ function Body() {
     <div><div>First:</div><input id ="first" type="text"/></div>
     <div><div>Last:</div><input id ="last" type="text" /></div>
     <div> <div>Email:</div><input id ="email" type="text" /></div>
-    <div> <div>Number:</div><input type="number" id ="i4"/></div>
+    <div> <div>Number:</div><input type="tel" id ="number"/></div>
     <div><button onClick={TextContent}>SUBMIT</button></div>
     </div>
 }
 
 function TextContent() {
-  const first = document.getElementById('first');
-  const last = document.getElementById('last');
-  const email = document.getElementById('email');
-  const number = document.getElementById('number');
+  const first = document.getElementById('first').value;
+  const last = document.getElementById('last').value;
+  const email = document.getElementById('email').value;
+  const number = document.getElementById('number').value;
   
   const TextContent = `${first}, ${last}, ${email}, ${number},`;
   
-  const blob = new Blob([TextContent], { type: 'text' });
+  const blob = new Blob([TextContent], { type: 'text/csv' });
 
   const link = document.createElement("a");
   link.href = window.URL.createObjectURL(blob);
